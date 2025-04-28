@@ -51,4 +51,4 @@ Contribuições são bem-vindas! Se você quiser melhorar ou adicionar novas fun
 
 ## Licença
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo LICENSE para mais detalhes.
+Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](https://github.com/indiaraelis/app-clima-indi/blob/main/LICENSE) para mais detalhes.
