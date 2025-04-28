@@ -1,11 +1,10 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request, jsonify, redirect
 import requests
 from datetime import datetime
+import os
+from dotenv import load_dotenv
 
 app = Flask(__name__)
-
-from dotenv import load_dotenv
-import os
 
 load_dotenv()
 API_KEY = os.getenv('API_KEY')
@@ -60,13 +59,8 @@ def weather(city):
 
     return render_template('index.html', result=result)
 
-
 # Definindo a porta a partir da variável de ambiente (para ambientes de deploy)
 port = int(os.environ.get('PORT', 5001))  # 5001 é a porta padrão local para o Flask
-
-@app.route('/')
-def home():
-    return 'Olá, Mundo!'
 
 if __name__ == "__main__":
     # Garantindo que o Flask escute em todas as interfaces de rede (0.0.0.0) e na porta certa
