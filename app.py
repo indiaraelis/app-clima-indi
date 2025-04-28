@@ -61,5 +61,13 @@ def weather(city):
     return render_template('index.html', result=result)
 
 
-if __name__ == '__main__':
-    app.run(debug=True, port=5001)
+# Definindo a porta a partir da variável de ambiente (para ambientes de deploy)
+port = int(os.environ.get('PORT', 5001))  # 5001 é a porta padrão local para o Flask
+
+@app.route('/')
+def home():
+    return 'Olá, Mundo!'
+
+if __name__ == "__main__":
+    # Garantindo que o Flask escute em todas as interfaces de rede (0.0.0.0) e na porta certa
+    app.run(host='0.0.0.0', port=port)
