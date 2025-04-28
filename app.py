@@ -4,7 +4,11 @@ from datetime import datetime
 
 app = Flask(__name__)
 
-API_KEY = '2388cd61f0c85502b99b44546f62c84b'
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+API_KEY = os.getenv('API_KEY')
 
 # Função para converter timestamp para hora legível
 @app.template_filter('timestamp_to_time')
