@@ -1,54 +1,87 @@
-# App de Previsão do Tempo
+# 🌦️ Easy Weather App
 
-Este é um aplicativo simples de previsão do tempo que utiliza a API do OpenWeather para fornecer dados sobre o clima de uma cidade. O app exibe a temperatura atual, sensação térmica, e horários de nascer e pôr do sol
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![OpenWeatherMap](https://img.shields.io/badge/OpenWeatherMap-FF8C00?style=for-the-badge&logo=openweathermap&logoColor=white)](https://openweathermap.org/)
 
-## Tecnologias Usadas
+## 📝 About the Project
 
-- **Flask**: Framework Python para desenvolvimento web.
-- **Requests**: Biblioteca Python para fazer requisições HTTP.
-- **Python-dotenv**: Para carregar variáveis de ambiente a partir de um arquivo `.env`.
-- **OpenWeather API**: API para obter dados de previsão do tempo.
+The **Easy Weather App** is a simple and intuitive web application that allows users to quickly check real-time weather conditions for any city worldwide. Built with Flask for the backend and a lightweight HTML/CSS/JavaScript frontend, it provides essential weather information fetched from the OpenWeatherMap API, including temperature, humidity, sunrise, and sunset times.
 
-## Funcionalidades
+This project serves as a practical demonstration of building a web application that consumes external APIs and presents data in a user-friendly interface.
 
-- O usuário pode inserir o nome de uma cidade no formulário.
-- O aplicativo retorna informações sobre:
-  - Temperatura atual
-  - Temperatura mínima e máxima
-  - Sensação térmica
-  - Horários de nascer e pôr do sol
+## ✨ Features
 
-## Instalação
+* **Real-time Weather:** Get current weather data for any specified city.
+* **Detailed Information:** Displays temperature (current, min, max, feels like), humidity, coordinates (latitude, longitude), country, sunrise, and sunset times.
+* **Intuitive Interface:** Simple and clean user interface for easy navigation and readability.
+* **Error Handling:** Provides feedback for cities not found or API issues.
 
-1. Clone este repositório:
-   ```bash
-   git clone https://github.com/indiaraelis/app-clima-indi.git
-   cd app-clima-indi
-2. Crie um ambiente virtual (recomendado):
-   ```bash
-   python -m venv venv
-   source venv/bin/activate  # No Windows use venv\\Scripts\\activate
-3. Instale as dependências:
-   ```bash
-   pip install -r requirements.txt
-4. Crie um arquivo .env na raiz do projeto e adicione a sua chave da API do OpenWeather:
-   ```bash
-   API_KEY=SUA_CHAVE_AQUI
+## 💻 Technologies Used
 
-## Rodando o App
+* **Python:** The core programming language for the backend logic.
+* **Flask:** A lightweight micro-web framework for Python, used for handling routes and rendering templates.
+* **Requests:** Python HTTP library for making requests to the OpenWeatherMap API.
+* **python-dotenv:** For managing environment variables (API Key).
+* **HTML5:** Structuring the web content.
+* **CSS3:** Styling the application for a clean and responsive design.
+* **JavaScript:** For dynamic client-side interactions and fetching data directly from the frontend (as seen in `index.html`).
+* **OpenWeatherMap API:** Provides comprehensive weather data.
 
-1. Execute o servidor Flask:
-   `python app.py`
-2. Acesse o aplicativo no navegador em http://xxx.x.x.x:5001.
+## 🚀 Getting Started
 
-## Deploy
+Follow these steps to get a copy of the project up and running on your local machine.
 
-Este aplicativo pode ser facilmente deployado em plataformas como **Render** ou **Heroku**. Para configurar o deploy, defina a variável de ambiente `PORT` na plataforma de deploy.
+### Prerequisites
 
-## Contribuições
+Make sure you have Python installed. It's recommended to use a virtual environment.
 
-Contribuições são bem-vindas! Se você quiser melhorar ou adicionar novas funcionalidades ao projeto, faça um fork e envie um pull request.
+* [Python 3.x](https://www.python.org/downloads/)
+* `pip` (Python package installer)
 
-## Licença
+### Installation
 
-Este projeto está licenciado sob a Licença MIT. Veja o arquivo [LICENSE](https://github.com/indiaraelis/app-clima-indi/blob/main/LICENSE) para mais detalhes. 
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/indiaraelis/app-clima-indi.git](https://github.com/indiaraelis/app-clima-indi.git)
+    cd app-clima-indi
+    ```
+
+2.  **Create a virtual environment (optional but recommended):**
+    ```bash
+    python -m venv venv
+    # On Windows
+    .\venv\Scripts\activate
+    # On macOS/Linux
+    source venv/bin/activate
+    ```
+
+3.  **Install dependencies:**
+    ```bash
+    pip install Flask requests python-dotenv
+    ```
+
+4.  **Set up your OpenWeatherMap API Key:**
+    * Sign up for a free account on [OpenWeatherMap](https://openweathermap.org/api).
+    * Obtain your API key from your account dashboard.
+    * Create a file named `.env` in the root directory of the project (where `app.py` is located) and add your API key:
+        ```
+        API_KEY=YOUR_OPENWEATHERMAP_API_KEY
+        ```
+        *Replace `YOUR_OPENWEATHERMAP_API_KEY` with your actual key.*
+
+### Running the Application
+
+1.  **Run the Flask application:**
+    ```bash
+    python app.py
+    ```
+2.  Open your web browser and navigate to `http://127.0.0.1:5001/` (or the port specified in your `app.py` if different).
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/indiaraelis/app-clima-indi/blob/master/LICENSE) file for details.
+
+## ✍️ Author
+
+* **Indiara Elis** - [LinkedIn](https://www.linkedin.com/in/indiaraelis) | [GitHub](https://github.com/indiaraelis) | [Portfolio](https://indiaraelis.github.io/indiaraelis-profile/)
